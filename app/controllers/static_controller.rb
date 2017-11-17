@@ -1,6 +1,7 @@
 class StaticController < ApplicationController
 
-def landing
-end
+  def landing
 
-end
+  end
+
+end 
