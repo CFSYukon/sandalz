@@ -18,13 +18,19 @@ Computers for Schools Yukon is the Yukon branch of Computers for Schools. We hel
 The CFSY Development team is the beginning of a code initiative to teach and bring development to the Yukon.
 
 *Joseph William Hays*
+
 Lead Developer
+
 joseph@cfsy.ca
 
 *Lane Collins*
+
 Developer, Graphic Designer
+
 lane@cfsy.ca
 
 *Ean McDonald*
+
 CFSY Administrator, DaBozz
+
 ean@cfsy.ca
