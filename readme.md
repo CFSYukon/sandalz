@@ -1,5 +1,5 @@
-## Sandalz
-### The Open Source Work-horse project manager designed for CFSY, built for everyone.
+# Sandalz
+## The Open Source Work-horse project manager designed for CFSY, built for everyone.
 
 #### Project Goal
 
@@ -17,20 +17,14 @@ Computers for Schools Yukon is the Yukon branch of Computers for Schools. We hel
 
 The CFSY Development team is the beginning of a code initiative to teach and bring development to the Yukon.
 
-*Joseph William Hays*
-
-Lead Developer
-
+**Joseph William Hays**  
+Lead Developer  
 joseph@cfsy.ca
 
-*Lane Collins*
-
-Developer, Graphic Designer
-
+**Lane Collins**  
+Developer, Graphic Designer  
 lane@cfsy.ca
 
-*Ean McDonald*
-
-CFSY Administrator, DaBozz
-
+**Ean McDonald**  
+CFSY Administrator, DaBozz  
 ean@cfsy.ca
