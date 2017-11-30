@@ -69,6 +69,6 @@ class WorkOrdersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def work_order_params
-      params.require(:work_order).permit(:started_on, :closed_on, :notes, :status)
+      params.require(:work_order).permit(:started_on, :notes, :status)
     end
 end
