@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Started on:</strong>
+  <%= @work_order.started_on %>
+</p>
+
+<p>
+  <strong>Closed on:</strong>
+  <%= @work_order.closed_on %>
+</p>
+
+<p>
+  <strong>Notes:</strong>
+  <%= @work_order.notes %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @work_order.status %>
+</p>
+
+<%= link_to 'Edit', edit_work_order_path(@work_order) %> |
+<%= link_to 'Back', work_orders_path %>

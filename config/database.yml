@@ -2,6 +2,7 @@ development:
   adapter: postgresql
   encoding: unicode
   database: sandalz_development
+  host: localhost
   pool: 5
   username: sandalz_dev
   password: sandalz_dev
@@ -10,9 +11,10 @@ test:
   adapter: postgresql
   encoding: unicode
   database: sandalz_test
+  host: localhost
   pool: 5
-  username: sandalz_test
-  password: sandalz_test
+  username: sandalz_dev
+  password: sandalz_dev
 
 production:
   adapter: postgresql
