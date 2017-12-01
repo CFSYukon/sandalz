@@ -1,0 +1,22 @@
+<%= form_with(model: inventory_sku, local: true) do |form| %>
+  <% if inventory_sku.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(inventory_sku.errors.count, "error") %> prohibited this inventory_sku from being saved:</h2>
+
+      <ul>
+      <% inventory_sku.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :descriptive_id %>
+    <%= form.text_field :descriptive_id, id: :sku_descriptive_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

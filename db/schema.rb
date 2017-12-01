@@ -10,10 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171130205025) do
+ActiveRecord::Schema.define(version: 20171201210515) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "inventory_serial_numbers", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "inventory_skus_id"
+    t.index ["inventory_skus_id"], name: "index_inventory_serial_numbers_on_inventory_skus_id"
+  end
+
+  create_table "inventory_skus", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "descriptive_id", null: false
+  end
 
   create_table "work_orders", force: :cascade do |t|
     t.date "started_on"
@@ -24,4 +37,5 @@ ActiveRecord::Schema.define(version: 20171130205025) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "inventory_serial_numbers", "inventory_skus", column: "inventory_skus_id"
 end

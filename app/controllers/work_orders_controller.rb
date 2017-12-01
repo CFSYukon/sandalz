@@ -51,6 +51,7 @@ class WorkOrdersController < ApplicationController
     end
   end
 
+
   # DELETE /work_orders/1
   # DELETE /work_orders/1.json
   def destroy

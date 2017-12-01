@@ -1,6 +1,13 @@
 Rails.application.routes.draw do
+  
+  get 'inventory', to: 'inventory#index'
+  namespace :inventory do
+    resources :serial_numbers
+    resources :skus
+  end
+
   resources :work_orders
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  root "static#landing"
+
+  root 'static#landing'
 
 end
