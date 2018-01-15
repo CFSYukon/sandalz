@@ -15,7 +15,7 @@ class WorkOrdersController < ApplicationController
   # GET /work_orders/new
   def new
     @work_order = WorkOrder.new
-  end
+ end
 
   # GET /work_orders/1/edit
   def edit
@@ -62,6 +62,10 @@ class WorkOrdersController < ApplicationController
     end
   end
 
+  def update_status
+    @work_order.update_attributes(:status => "different status")
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_work_order
@@ -72,4 +76,4 @@ class WorkOrdersController < ApplicationController
     def work_order_params
       params.require(:work_order).permit(:started_on, :notes, :status)
     end
-end
+end 

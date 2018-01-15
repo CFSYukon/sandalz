@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class Inventory::SerialNumberTest < ActiveSupport::TestCase
+class Inventory::EachTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

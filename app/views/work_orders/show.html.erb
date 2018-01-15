@@ -16,8 +16,31 @@
 </p>
 
 <p>
-  <strong>Status:</strong>
-  <%= @work_order.status %>
+  <%= form_with(model: @work_order, local: true) do |form| %>
+  <% if @work_order.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(work_order.errors.count, "error") %> prohibited this work_order from being saved:</h2>
+
+      <ul>
+      <% work_order.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <!-- DEFINITELY NEEDS A LIST OF LINE ITEMS, THINKNING array of hashes? [],[],[] -->
+
+  <div class="field">
+    <strong><%= form.label :status %></strong>
+    <%= form.select :status, options_for_select([['Closed','0'],['Awaiting Client Contact','1'],['Currently Active','2']], @work_order.status) %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit "Update Status" %>
+  </div>
+<% end %>
+
 </p>
 
 <%= link_to 'Edit', edit_work_order_path(@work_order) %> |

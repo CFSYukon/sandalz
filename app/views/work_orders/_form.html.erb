@@ -23,10 +23,11 @@
 
   <div class="field">
     <%= form.label :status %>
-    <%= form.text_field :status, id: :work_order_status %>
+    <%= form.select :status, options_for_select([['Closed','0'],['Awaiting Client Contact','1'],['Currently Active','2']], work_order.status) %>
   </div>
 
   <div class="actions">
     <%= form.submit %>
   </div>
+  
 <% end %>
