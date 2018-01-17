@@ -1,16 +1,15 @@
 Rails.application.routes.draw do
-  
-  namespace :inventory do
-    resources :eaches
-  end
+
   get 'inventory', to: 'inventory#index'
   namespace :inventory do
-    resources :serial_numbers
     resources :skus
   end
 
   resources :work_orders
+  resources :line_items
 
   root 'static#landing'
+
+## Need routing for generating new line items on work order
 
 end

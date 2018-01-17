@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  sku: one
+  description: MyText
+  quantity: 1
+  price_adjustment: 9.99
+
+two:
+  sku: two
+  description: MyText
+  quantity: 1
+  price_adjustment: 9.99

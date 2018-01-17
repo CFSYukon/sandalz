@@ -1,0 +1,16 @@
+<%= form_with(model: line_item, remote: true) do |form| %>
+
+    <%= form.collection_select(:work_order_id, WorkOrder.all, :id, :id) %> <br />
+    <%= form.collection_select(:inventory_sku_id, Inventory::SKU.all, :id, :descriptive_id) %> <br />
+
+
+    <%= form.text_area :description, id: :line_item_description %>
+
+    <%= form.number_field :quantity, id: :line_item_quantity %>
+
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+  
+<% end %>

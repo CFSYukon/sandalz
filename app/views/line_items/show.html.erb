@@ -1,0 +1,47 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Started on:</strong>
+  <%= @line_item.started_on %>
+</p>
+
+<p>
+  <strong>Closed on:</strong>
+  <%= @line_item.closed_on %>
+</p>
+
+<p>
+  <strong>Notes:</strong>
+  <%= @line_item.notes %>
+</p>
+
+<p>
+  <%= form_with(model: @line_item, local: true) do |form| %>
+  <% if @line_item.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(line_item.errors.count, "error") %> prohibited this line_item from being saved:</h2>
+
+      <ul>
+      <% line_item.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <!-- DEFINITELY NEEDS A LIST OF LINE ITEMS, THINKNING array of hashes? [],[],[] -->
+
+  <div class="field">
+    <strong><%= form.label :status %></strong>
+    <%= form.select :status, options_for_select([['Closed','0'],['Awaiting Client Contact','1'],['Currently Active','2']], @line_item.status) %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit "Update Status" %>
+  </div>
+<% end %>
+
+</p>
+
+<%= link_to 'Edit', edit_line_item_path(@line_item) %> |
+<%= link_to 'Back', line_items_path %>
