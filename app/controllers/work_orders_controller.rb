@@ -10,6 +10,7 @@ class WorkOrdersController < ApplicationController
   # GET /work_orders/1
   # GET /work_orders/1.json
   def show
+    @line_item = LineItem.new
   end
 
   # GET /work_orders/new
@@ -60,10 +61,6 @@ class WorkOrdersController < ApplicationController
       format.html { redirect_to work_orders_url, notice: 'Work order was successfully destroyed.' }
       format.json { head :no_content }
     end
-  end
-
-  def update_status
-    @work_order.update_attributes(:status => "different status")
   end
 
   private

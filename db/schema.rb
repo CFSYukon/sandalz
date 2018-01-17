@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180112235558) do
+ActiveRecord::Schema.define(version: 20180117174308) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,6 +22,18 @@ ActiveRecord::Schema.define(version: 20180112235558) do
     t.string "descriptive_id", null: false
   end
 
+  create_table "line_items", force: :cascade do |t|
+    t.text "description"
+    t.integer "quantity"
+    t.decimal "price_adjustment"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "work_order_id"
+    t.bigint "inventory_sku_id"
+    t.index ["inventory_sku_id"], name: "index_line_items_on_inventory_sku_id"
+    t.index ["work_order_id"], name: "index_line_items_on_work_order_id"
+  end
+
   create_table "work_orders", force: :cascade do |t|
     t.date "started_on"
     t.date "closed_on"
@@ -29,7 +41,6 @@ ActiveRecord::Schema.define(version: 20180112235558) do
     t.integer "status"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.hstore "lineitems"
   end
 
 end
