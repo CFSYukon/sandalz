@@ -26,11 +26,11 @@
 <% end %>
 </div>
 
-<%= @work_order.line_item.each do |li| %>
+<%= @work_order.line_items.each do |li| %>
   <p> <%= li.description %> </p>
   <% end %>
 
-<%= render 'line_items/add_line_item', work_order: @work_order %>
+<%= render 'line_items/add_line_item', wo: @work_order %>
 
 </p>
 

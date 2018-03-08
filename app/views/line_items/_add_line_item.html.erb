@@ -1,6 +1,4 @@
-<%= form_with(model: @line_item, remote: true) do |form| %>
-
-    <%= form.hidden_field :work_order_id, value: work_order.id %>
+<%= form_for([@work_order, @new_line_item], remote: true) do |form| %>
 
     <%= form.collection_select(:inventory_sku_id, Inventory::SKU.all, :id, :descriptive_id) %>
 
@@ -8,6 +6,7 @@
 
     <%= form.number_field :quantity, id: :line_item_quantity %>
 
+    <%= form.hidden_field :work_order_id, id: :work_order_id, value: wo.id %>
 
   <div class="actions">
     <%= form.submit "New Item" %>

@@ -1,3 +1,3 @@
 class WorkOrder < ApplicationRecord
-  has_many :line_item
+  has_many :line_items
 end

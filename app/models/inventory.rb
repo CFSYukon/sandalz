@@ -3,3 +3,4 @@ module Inventory
     'inventory_'
   end
 end
+ 
