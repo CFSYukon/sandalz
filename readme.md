@@ -1,3 +1,7 @@
+# REDUX
+Let's kick this into gear.
+
+
 # Sandalz
 ## The Open Source Work-horse project manager designed for CFSY, built for everyone.
 
